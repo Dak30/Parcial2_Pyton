@@ -7,7 +7,7 @@
     {% for producto in productos %}
       <tr>
         <td>{{ producto.marca }}</td>
-        <td><a href="">{{ producto.nombre }}</a></td>
+        <td><a href="/producto/{{producto.id}}">{{ producto.nombre }}</a></td>
         <td style = "text-align: right">{{ "{:,}".format(producto.precio) }}</td>
       </tr>
     {% endfor %}

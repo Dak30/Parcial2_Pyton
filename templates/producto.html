@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block titulo %}Tienda Virtual{% endblock %}
+{% block titulo %}{{ producto.nombre }}{% endblock %}
 
 {% block contenido %}
   <table align="center">
@@ -15,5 +15,6 @@
         </td>
       </tr>
   </table>
+  <a href="{{ url_for('ruta_raiz') }}"')}}"><button>Inicio</button></a>
 {% endblock %}
 
