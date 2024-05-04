@@ -3,15 +3,17 @@
 {% block titulo %}Tienda Virtual{% endblock %}
 
 {% block contenido %}
-  <table>
-    {% for producto in productos %}
+  <table align="center">
       <tr>
-        <td>foto</td>
-        <td>{{ producto.nombre }}
-        {{ "{:,}".format(producto.precio) }}
+        <td>
+          <img src="{{ url_for('static', filename='fotos/') }}{{producto.id}}.jpg" width="256">
+        </td>
+        <td>
+          <h2>{{ producto.categoria }} - {{ producto.marca }}</h2>
+          <h1>{{ producto.nombre }}</h1>
+          <h2>{{ "{:,}".format(producto.precio) }}</h2>
         </td>
       </tr>
-    {% endfor %}
   </table>
 {% endblock %}
 
