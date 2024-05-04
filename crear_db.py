@@ -29,5 +29,5 @@ datos = [
 ]
 
 cursor.executemany("""
-INSERT INTO productos (?, ?, ?, ?, ?)
+INSERT INTO productos VALUES (?, ?, ?, ?, ?)
 """, datos)
