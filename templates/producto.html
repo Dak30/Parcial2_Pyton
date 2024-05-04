@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Tienda Virtual{% endblock %}
+
+{% block contenido %}
+  <table>
+    {% for producto in productos %}
+      <tr>
+        <td>foto</td>
+        <td>{{ producto.nombre }}
+        {{ "{:,}".format(producto.precio) }}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+
